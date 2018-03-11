@@ -3,13 +3,14 @@
 #include <iostream>
 using bit_array = std::vector<bool>;
 using byte = unsigned char;
+using index = unsigned int;
 
 template<class T>
 class HammingCode
 {
     T payload;
     bit_array encoding;
-    static bit_array encode(const bit_array &message);
+    const bit_array encode(const bit_array &message);
 
   public:
     HammingCode(const T& Payload);
